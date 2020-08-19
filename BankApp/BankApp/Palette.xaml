@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BankApp.Palette">
+    <Color x:Key="main">#2a304b</Color>
+    <Color x:Key="blue">#4c82d3</Color>
+    <Color x:Key="secondBg">#f7f9fc</Color>
+    <Color x:Key="gray">#c2c4cc</Color>
+    <Color x:Key="white">#ffffff</Color>
+    <Color x:Key="iconsColor">#f6f7f9</Color>
+</ResourceDictionary>

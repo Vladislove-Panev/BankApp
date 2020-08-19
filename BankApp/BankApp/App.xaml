@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BankApp.App">
+    <Application.Resources>
+        <Style x:Key="CardTextStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="TextColor" Value="{DynamicResource AppGrayColor}"/>
+        </Style>
+        <Style x:Key="CardBalanceStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="TextColor" Value="{DynamicResource AppIconsColor}"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+        </Style>
+        <Style x:Key="CardBottomTextStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="TextColor" Value="{DynamicResource AppIconsColor}"/>
+        </Style>
+        <Style x:Key="mainLabelStyles" TargetType="Label">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="CharacterSpacing" Value="0.3" />
+        </Style>
+
+        <Style x:Key="mainLabel" TargetType="Label" BasedOn="{StaticResource mainLabelStyles}">
+            <Setter Property="FontSize" Value="30" />
+            <Setter Property="CharacterSpacing" Value="0.5" />
+            <Setter Property="TextColor" Value="{DynamicResource AppWhiteColor}" />
+        </Style>
+
+        <Style x:Key="desc" TargetType="Label" BasedOn="{StaticResource mainLabelStyles}">
+            <Setter Property="TextColor" Value="{DynamicResource AppGrayColor}" />
+        </Style>
+
+        <Style x:Key="secondLabel" TargetType="Label" BasedOn="{StaticResource mainLabelStyles}">
+            <Setter Property="TextColor" Value="{DynamicResource AppMainColor}" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        </Style>
+
+        <Style x:Key="thirdLabel" TargetType="Label" BasedOn="{StaticResource mainLabelStyles}">
+            <Setter Property="TextColor" Value="{DynamicResource AppBlueColor}" />
+            <Setter Property="HorizontalOptions" Value="EndAndExpand" />
+        </Style>
+
+        <Style x:Key="transLabel" TargetType="Label" BasedOn="{StaticResource mainLabelStyles}">
+            <Setter Property="TextColor" Value="{DynamicResource AppMainColor}" />
+            <Setter Property="FontAttributes" Value="Bold" />
+        </Style>
+
+        <Style x:Key="infoLabel" TargetType="Label" BasedOn="{StaticResource mainLabelStyles}">
+            <Setter Property="TextColor" Value="{DynamicResource AppGrayColor}" />
+            <Setter Property="FontSize" Value="12" />
+        </Style>
+    </Application.Resources>
+</Application>

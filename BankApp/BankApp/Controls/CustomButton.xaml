@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BankApp.Controls.CustomButton"
+             x:Name="ParentFrame">
+    <Frame BackgroundColor="{Binding Path=BackgroundColor, Source={x:Reference ParentFrame}}"
+           CornerRadius="{Binding Path=ButtonCornerRadius, Source={x:Reference ParentFrame}}"
+           HeightRequest="{Binding Path=ButtonHeightRequest, Source={x:Reference ParentFrame}}"
+           Padding="{Binding Path=ButtonPadding, Source={x:Reference ParentFrame}}">
+        <Label Text="{Binding Path=Text, Source={x:Reference ParentFrame}}"
+               TextColor="{Binding Path=Color, Source={x:Reference ParentFrame}}"
+               VerticalTextAlignment="{Binding Path=LabelVerticalTextAlignment, Source={x:Reference ParentFrame}}"
+               HorizontalTextAlignment="{Binding Path=LabelHorizontalTextAlignment, Source={x:Reference ParentFrame}}"
+               FontSize="{Binding Path=TextFontSize, Source={x:Reference ParentFrame}}" />
+    </Frame>
+</ContentView>

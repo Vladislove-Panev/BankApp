@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:view="clr-namespace:BankApp.View"
+             xmlns:controls="clr-namespace:BankApp.Controls"
+             x:Class="BankApp.MainPage"
+             BackgroundColor="{DynamicResource AppSecondBgColor}"
+             Title="Your Cards">
+
+    <Grid Margin="20, 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.55*"/>
+            <RowDefinition Height="0.55*"/>
+            <RowDefinition Height="0.55*"/>
+            <RowDefinition Height="0.1*"/>
+        </Grid.RowDefinitions>
+
+        <Label Style="{StaticResource desc}"
+               Grid.Row="0">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="{Binding PhysicalCardCount}" />
+                        <Span Text=" physical card, " />
+                        <Span Text="{Binding VirtualCardCount}" />
+                        <Span Text=" virtual card" />
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>    
+        </Label>
+
+        <StackLayout Grid.Row="1"
+                     Orientation="Horizontal">
+            <controls:CustomButton Text="Physical card"
+                               BackgroundColor="{DynamicResource AppIconsColor}"
+                               ButtonCornerRadius="15"
+                               ButtonHeightRequest="10"
+                               Color="{DynamicResource AppMainColor}"
+                               TextFontSize="12"
+                               ButtonPadding="15,0"
+                               Margin="0, 0, 10, 10"/>
+
+            <controls:CustomButton Text="Virtual card"
+                               BackgroundColor="{DynamicResource AppIconsColor}"
+                               ButtonCornerRadius="15"
+                               ButtonHeightRequest="10"
+                               Color="{DynamicResource AppMainColor}"
+                               TextFontSize="12"
+                               ButtonPadding="15,0"
+                               Margin="0, 0, 0, 10"/>
+        </StackLayout>
+
+        <view:CustomCarouselView Grid.Row="2" />
+        
+        <Label Text="Card Settings" 
+               Grid.Row="3"
+               VerticalOptions="Start"
+               FontSize="Large"
+               TextColor="{DynamicResource AppMainColor}"
+               FontAttributes="Bold"/>
+
+        <view:CustomFrameSettingsView Grid.Row="4"
+                                      LabelText="Contactless Payment."
+                                      Margin="0, 5"/>
+        <view:CustomFrameSettingsView Grid.Row="5" 
+                                      LabelText="Online Payment"
+                                      Margin="0, 5"/>
+        <view:CustomFrameSettingsView Grid.Row="6" 
+                                      LabelText="ATM Whithdraws"
+                                      Margin="0, 5"/>
+    </Grid>
+</ContentPage>
